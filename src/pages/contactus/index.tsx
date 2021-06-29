@@ -47,7 +47,7 @@ const Contact: FunctionComponent = () => {
 
 <div className="wp-block-contact-form-7-contact-form-selector"><div role="form" className="wpcf7" id="wpcf7-f567-p565-o1" lang="en-US" dir="ltr">
 <div className="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-<form action="https://smartmag.theme-sphere.com/good-news/get-in-touch/#wpcf7-f567-p565-o1" method="post" className="wpcf7-form init" novalidate="novalidate" data-status="init">
+<form action="https://smartmag.theme-sphere.com/good-news/get-in-touch/#wpcf7-f567-p565-o1" method="post" className="wpcf7-form init" noValidate="novalidate" data-status="init">
 <div style={{display: 'none'}}>
 <input type="hidden" name="_wpcf7" value="567" />
 <input type="hidden" name="_wpcf7_version" value="5.4" />
