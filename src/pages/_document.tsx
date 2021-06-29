@@ -1,13 +1,12 @@
-import * as React from 'react'
-import Document, {Html, Head, Main, NextScript} from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+import getConfig from 'next/config'
+const { publicRuntimeConfig } = getConfig()
+console.log(publicRuntimeConfig.baseUrl)
 
-export default class extends Document {
-  static async getInitialProps(...args) {
-    const documentProps = await Document.getInitialProps(...args)
-    const {req, renderPage} = args[0]
-    const page = renderPage()
-
-    return {...documentProps, ...page}
+class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps }
   }
 
   render() {
@@ -17,7 +16,7 @@ export default class extends Document {
 <meta name='robots' content='max-image-preview:large' />
 <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
 <link rel='dns-prefetch' href='http://s.w.org/' />
-<link rel='stylesheet' id='smartmag-core-css'  href='https://www.quacthemes.ml/base/css/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='smartmag-core-css'  href={'{publicRuntimeConfig.baseUrl}base/css/main.css'} type='text/css' media='all' />
 <link crossorigin="anonymous" rel='stylesheet' id='smartmag-fonts-css'  href='https://fonts.googleapis.com/css?family=Public+Sans%3A400%2C400i%2C500%2C600%2C700' type='text/css' media='all' />
 <link rel='stylesheet' id='magnific-popup-css'  href='https://www.quacthemes.ml/base/css/lightbox0e7d.css?ver=5.2.0' type='text/css' media='all' />
 <link rel='stylesheet' id='smartmag-icons-css'  href='https://www.quacthemes.ml/base/css/icons/icons0e7d.css?ver=5.2.0' type='text/css' media='all' />
@@ -42,10 +41,10 @@ var BunyadLazy = {"type":"smart"};
 <script type='text/javascript' src='https://www.quacthemes.ml/base/js/theme.js?ver=5.2.0' id='smartmag-theme-js'></script>
 <script type='text/javascript' src='https://www.quacthemes.ml/base/js/jquery.sticky-sidebar.js?ver=5.2.0' id='theia-sticky-sidebar-js'></script>
 <script type='text/javascript' src='https://www.quacthemes.ml/base/js/micro-modal.js?ver=5.2.0' id='micro-modal-js'></script>
-
+        
       </Html>
     );
   }
 }
 
-export default MyDocument;
+export default MyDocument
