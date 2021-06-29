@@ -2,6 +2,7 @@ import React from "react";
 
 export default function Extra() {
   return (
+<>
  <div className="search-modal-wrap" data-scheme="dark">
 		<div className="search-modal-box" role="dialog" aria-modal="true">
 
@@ -124,6 +125,6 @@ export default function Extra() {
 							</div>
 
 		</div>			</div>			</div>
-
+</>
     );
     }
