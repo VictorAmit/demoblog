@@ -4,7 +4,7 @@ import About from "./about";
 import Posts from "./post";
 import Social from "./Social";
 
-const Main: FunctionComponent = () => {
+export default function Main() {
     return (
     <>
     <footer className="main-footer cols-gap-lg footer-bold s-dark">
