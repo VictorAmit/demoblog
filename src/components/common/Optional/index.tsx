@@ -20,7 +20,7 @@ export default function Extra() {
 	</div>
 	
 <div id="auth-modal" className="ts-modal auth-modal" aria-hidden="true">
-	<div className="ts-modal-overlay" tabIndex="-1" data-micromodal-close>
+	<div className="ts-modal-overlay" tabIndex="1" data-micromodal-close>
 		<div className="ts-modal-container" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
 			<header className="ts-modal-header">
 				<h2 id="auth-modal-title" className="visuallyhidden">
