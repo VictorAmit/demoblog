@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import React from "react";
 
 export default function Extra() {
   return (
@@ -125,6 +125,5 @@ export default function Extra() {
 
 		</div>			</div>			</div>
 
-    )
+    );
     }
-export default Layout
